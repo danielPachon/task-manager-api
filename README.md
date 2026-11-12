@@ -6,7 +6,9 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-**🚀 Live demo:** [task-manager-api-0uhq.onrender.com/docs](https://task-manager-api-0uhq.onrender.com/docs) (interactive Swagger UI)
+**🚀 Live demo:** [web app](https://task-manager-web-cn5q.onrender.com) · [interactive API docs](https://task-manager-api-0uhq.onrender.com/docs)
+
+**Frontend:** [task-manager-web](https://github.com/danielPachon/task-manager-web), a React and TypeScript Kanban board that consumes this API.
 
 > Hosted on Render's free tier with a Neon PostgreSQL database. The first request after inactivity can take up to a minute while the service wakes up.
 
