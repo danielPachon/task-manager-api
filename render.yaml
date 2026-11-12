@@ -3,7 +3,7 @@ services:
     name: task-manager-api
     runtime: docker
     plan: free
-    region: oregon
+    region: virginia
     branch: main
     healthCheckPath: /health
     autoDeploy: true
