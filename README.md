@@ -6,6 +6,10 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
+**🚀 Live demo:** [task-manager-api-0uhq.onrender.com/docs](https://task-manager-api-0uhq.onrender.com/docs) (interactive Swagger UI)
+
+> Hosted on Render's free tier with a Neon PostgreSQL database. The first request after inactivity can take up to a minute while the service wakes up.
+
 A RESTful API to manage personal tasks, with JWT authentication, input validation, filtering, sorting and pagination. Built with **Node.js, TypeScript, Express 5 and PostgreSQL**, covered by integration tests and shipped with Docker and CI.
 
 ## Features
@@ -29,6 +33,7 @@ A RESTful API to manage personal tasks, with JWT authentication, input validatio
 | Validation | Zod |
 | Testing | Jest, Supertest (integration tests against a real database) |
 | Tooling | ESLint, Docker, GitHub Actions |
+| Hosting | Render (Docker, Blueprint as code), Neon (serverless PostgreSQL) |
 
 ## Architecture
 
@@ -50,6 +55,10 @@ src/
 Each module follows a **routes → service → repository** layering: routes handle HTTP concerns, services hold business rules (for example, every task query is scoped to the authenticated user) and repositories are the only place that talks to the database.
 
 ## Getting started
+
+### Try it online
+
+Open the [live Swagger UI](https://task-manager-api-0uhq.onrender.com/docs), register a user with `POST /auth/register`, click **Authorize** and paste the returned token to call the task endpoints.
 
 ### With Docker (recommended)
 
@@ -141,7 +150,6 @@ CI runs lint, type checking, tests and the build on every push and pull request.
 - [ ] Refresh tokens and logout
 - [ ] Task labels and sub-tasks
 - [ ] Request logging with correlation IDs
-- [ ] Deployment to a cloud provider
 
 ## License
 
